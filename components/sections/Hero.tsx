@@ -2,17 +2,42 @@
 
 import { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
-import BlurText from '@/components/reactbits/BlurText/BlurText';
 import Magnetic from '@/components/Magnetic';
 
 export default function Hero() {
   const ref = useRef<HTMLElement>(null);
+  const circleRef = useRef<SVGPathElement>(null);
 
   useEffect(() => {
     const el = ref.current;
     if (!el) return;
 
     const ctx = gsap.context(() => {
+      // Word reveal: duration 1, stagger 0.08, delay 0.1 → last word finishes ~1.58s
+      gsap.from('[data-hero-word]', {
+        y: 60,
+        opacity: 0,
+        filter: 'blur(10px)',
+        duration: 1,
+        delay: 0.1,
+        stagger: 0.08,
+        ease: 'power3.out',
+      });
+
+      // Circle around "não" draws from one end to the other,
+      // starting right as the title finishes de-blurring.
+      if (circleRef.current) {
+        gsap.fromTo(
+          circleRef.current,
+          { strokeDashoffset: 100 },
+          {
+            strokeDashoffset: 0,
+            duration: 1.1,
+            delay: 1,
+            ease: 'power2.out',
+          }
+        );
+      }
       gsap.from('[data-hero-sub]', {
         opacity: 0,
         y: 20,
@@ -66,13 +91,47 @@ export default function Hero() {
         </p>
 
         <h1 className="font-serif text-[clamp(2.25rem,8vw,8rem)] leading-[0.95] tracking-tight text-ink max-w-5xl">
-          <BlurText
-            text="Websites que não parecem feitos num template."
-            animateBy="words"
-            direction="top"
-            delay={90}
-            stepDuration={0.4}
-          />
+          <span data-hero-word className="inline-block will-change-transform">
+            Websites
+          </span>{' '}
+          <span data-hero-word className="inline-block will-change-transform">
+            que
+          </span>{' '}
+          <span
+            data-hero-word
+            className="inline-block relative italic text-accent will-change-transform"
+          >
+            não
+            <svg
+              aria-hidden="true"
+              viewBox="0 0 120 70"
+              preserveAspectRatio="none"
+              className="absolute left-[-23%] right-[-23%] top-[-35%] bottom-[-35%] w-[146%] h-[170%] pointer-events-none overflow-visible"
+            >
+              <path
+                ref={circleRef}
+                pathLength={100}
+                d="M60,6 C 96,6 112,20 112,36 C 112,58 86,66 60,66 C 32,66 8,56 8,36 C 8,16 32,8 60,10"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                fill="none"
+                style={{ strokeDasharray: 100, strokeDashoffset: 100 }}
+              />
+            </svg>
+          </span>{' '}
+          <span data-hero-word className="inline-block will-change-transform">
+            parecem
+          </span>{' '}
+          <span data-hero-word className="inline-block will-change-transform">
+            feitos
+          </span>{' '}
+          <span data-hero-word className="inline-block will-change-transform">
+            num
+          </span>{' '}
+          <span data-hero-word className="inline-block will-change-transform">
+            template.
+          </span>
         </h1>
 
         <p
@@ -117,7 +176,7 @@ export default function Hero() {
           <span className="h-px w-10 bg-ink/40" />
           scroll
         </div>
-        <div className="hidden md:block">(est. 2025)</div>
+        <div className="hidden md:block">(est. 2026)</div>
       </div>
     </section>
   );

@@ -157,6 +157,13 @@ export default function MacbookScroll() {
         ref={titleRef}
         className="absolute top-20 md:top-28 inset-x-0 text-center px-5 md:px-6 z-10"
       >
+        <div className="inline-flex items-center justify-center w-12 h-12 md:w-14 md:h-14 rounded-full bg-accent/10 text-accent mb-4 md:mb-5">
+          <svg viewBox="0 0 24 24" fill="none" className="w-6 h-6 md:w-7 md:h-7">
+            <rect x="3" y="4" width="18" height="12" rx="1.5" stroke="currentColor" strokeWidth="1.5"/>
+            <path d="M2 19 L22 19" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
+            <path d="M10 19 L14 19" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round"/>
+          </svg>
+        </div>
         <p className="text-[10px] md:text-xs uppercase tracking-[0.3em] text-muted mb-3 md:mb-4">
           O teu site. Qualquer ecrã.
         </p>
@@ -306,7 +313,25 @@ function MacScreenContent() {
             Estúdio web · Portugal
           </div>
           <div className="font-serif text-[clamp(1rem,3.5vw,2.6rem)] leading-[0.95] max-w-[85%]">
-            Websites que não parecem feitos num template.
+            Websites que{' '}
+            <span className="relative italic text-accent inline-block">
+              não
+              <svg
+                aria-hidden="true"
+                viewBox="0 0 120 70"
+                preserveAspectRatio="none"
+                className="absolute left-[-23%] right-[-23%] top-[-35%] bottom-[-35%] w-[146%] h-[170%] pointer-events-none overflow-visible"
+              >
+                <path
+                  d="M60,6 C 96,6 112,20 112,36 C 112,58 86,66 60,66 C 32,66 8,56 8,36 C 8,16 32,8 60,10"
+                  stroke="currentColor"
+                  strokeWidth="2.5"
+                  strokeLinecap="round"
+                  fill="none"
+                />
+              </svg>
+            </span>{' '}
+            parecem feitos num template.
           </div>
           <div className="mt-4 flex gap-2">
             <div className="bg-ink text-paper rounded-full px-3 py-1.5 text-[10px]">

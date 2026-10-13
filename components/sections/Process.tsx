@@ -31,6 +31,14 @@ export default function Process() {
     >
       <div className="max-w-7xl mx-auto">
         <Reveal className="max-w-3xl mb-20">
+          <div data-reveal className="inline-flex items-center justify-center w-14 h-14 rounded-full bg-accent/10 text-accent mb-5 md:mb-6">
+            <svg viewBox="0 0 24 24" fill="none" className="w-7 h-7">
+              <circle cx="4" cy="12" r="2" stroke="currentColor" strokeWidth="1.5"/>
+              <circle cx="12" cy="12" r="2" stroke="currentColor" strokeWidth="1.5"/>
+              <circle cx="20" cy="12" r="2" stroke="currentColor" strokeWidth="1.5"/>
+              <path d="M6.3 12 L10 12 M14 12 L17.7 12" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
+            </svg>
+          </div>
           <p data-reveal className="text-xs uppercase tracking-[0.3em] text-muted mb-6">
             Processo
           </p>

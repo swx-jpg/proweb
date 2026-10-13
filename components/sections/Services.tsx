@@ -23,6 +23,11 @@ export default function Services() {
     <section id="servicos" className="relative py-24 md:py-48 px-5 md:px-10">
       <div className="max-w-7xl mx-auto">
         <Reveal className="max-w-3xl mb-20 md:mb-32">
+          <div data-reveal className="inline-flex items-center justify-center w-14 h-14 rounded-full bg-accent/10 text-accent mb-5 md:mb-6">
+            <svg viewBox="0 0 24 24" fill="none" className="w-7 h-7">
+              <path d="M12 2 L13.6 10.4 L22 12 L13.6 13.6 L12 22 L10.4 13.6 L2 12 L10.4 10.4 Z" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round"/>
+            </svg>
+          </div>
           <p data-reveal className="text-xs uppercase tracking-[0.3em] text-muted mb-6">
             O que fazemos
           </p>

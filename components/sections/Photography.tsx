@@ -9,6 +9,14 @@ export default function Photography() {
     >
       <div className="max-w-7xl mx-auto">
         <Reveal className="max-w-3xl mb-14 md:mb-20">
+          <div data-reveal className="inline-flex items-center justify-center w-14 h-14 rounded-full bg-accent/10 text-accent mb-5 md:mb-6">
+            <svg viewBox="0 0 24 24" fill="none" className="w-7 h-7">
+              <path d="M8 7 L9.5 4 L14.5 4 L16 7" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round" strokeLinecap="round"/>
+              <rect x="2" y="7" width="20" height="13" rx="2" stroke="currentColor" strokeWidth="1.5"/>
+              <circle cx="12" cy="14" r="4" stroke="currentColor" strokeWidth="1.5"/>
+              <circle cx="18.5" cy="10.5" r="0.8" fill="currentColor"/>
+            </svg>
+          </div>
           <p data-reveal className="text-[10px] md:text-xs uppercase tracking-[0.3em] text-muted mb-4 md:mb-6">
             Fotografia para o site
           </p>

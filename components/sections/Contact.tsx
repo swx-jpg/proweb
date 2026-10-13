@@ -20,6 +20,11 @@ export default function Contact() {
     >
       <div className="max-w-7xl mx-auto">
         <Reveal className="max-w-3xl mb-12 md:mb-16">
+          <div data-reveal className="inline-flex items-center justify-center w-14 h-14 rounded-full bg-accent/20 text-accent-soft mb-5 md:mb-6">
+            <svg viewBox="0 0 24 24" fill="none" className="w-7 h-7">
+              <path d="M3 5 Q3 3.5 4.5 3.5 L19.5 3.5 Q21 3.5 21 5 L21 15 Q21 16.5 19.5 16.5 L13 16.5 L8 20.5 L8 16.5 L4.5 16.5 Q3 16.5 3 15 Z" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round" strokeLinecap="round"/>
+            </svg>
+          </div>
           <p data-reveal className="text-[10px] md:text-xs uppercase tracking-[0.3em] text-paper/50 mb-4 md:mb-6">
             Vamos a isto
           </p>

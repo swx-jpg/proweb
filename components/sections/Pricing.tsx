@@ -40,6 +40,12 @@ export default function Pricing() {
     >
       <div className="max-w-7xl mx-auto">
         <div className="max-w-3xl mb-14 md:mb-20">
+          <div className="inline-flex items-center justify-center w-14 h-14 rounded-full bg-accent/10 text-accent mb-5 md:mb-6">
+            <svg viewBox="0 0 24 24" fill="none" className="w-7 h-7">
+              <path d="M12 2 L22 12 L13 21 L2 10 L2 2 Z" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round"/>
+              <circle cx="7.5" cy="7.5" r="1.5" stroke="currentColor" strokeWidth="1.5"/>
+            </svg>
+          </div>
           <p className="text-[10px] md:text-xs uppercase tracking-[0.3em] text-muted mb-4 md:mb-6">
             Pacotes
           </p>

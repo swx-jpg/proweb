@@ -21,16 +21,52 @@ const projects = [
     image: 'https://picsum.photos/seed/casa-oliveira/1200/1500',
   },
   {
+    name: 'Clínica Horizonte',
+    tag: 'Clínica dentária',
+    year: '2025',
+    image: 'https://picsum.photos/seed/clinica-horizonte/1200/1500',
+  },
+  {
     name: 'Nord Atelier',
     tag: 'Moda',
     year: '2024',
     image: 'https://picsum.photos/seed/nord-atelier/1200/1500',
   },
   {
+    name: 'Villa Verde',
+    tag: 'Turismo rural',
+    year: '2024',
+    image: 'https://picsum.photos/seed/villa-verde/1200/1500',
+  },
+  {
     name: 'Fermenta',
     tag: 'Padaria artesanal',
     year: '2024',
     image: 'https://picsum.photos/seed/fermenta/1200/1500',
+  },
+  {
+    name: 'Café do Largo',
+    tag: 'Café',
+    year: '2025',
+    image: 'https://picsum.photos/seed/cafe-do-largo/1200/1500',
+  },
+  {
+    name: 'Boutique Lusa',
+    tag: 'Loja de roupa',
+    year: '2025',
+    image: 'https://picsum.photos/seed/boutique-lusa/1200/1500',
+  },
+  {
+    name: 'Flores da Lapa',
+    tag: 'Floricultura',
+    year: '2024',
+    image: 'https://picsum.photos/seed/flores-da-lapa/1200/1500',
+  },
+  {
+    name: 'Advogados Costa',
+    tag: 'Advocacia',
+    year: '2025',
+    image: 'https://picsum.photos/seed/advogados-costa/1200/1500',
   },
 ];
 
@@ -65,27 +101,6 @@ export default function Portfolio() {
           },
         });
 
-        // Scroll-velocity skew — cards tilt based on how fast you scroll.
-        const skewSetter = gsap.quickSetter('[data-work-card]', 'skewY', 'deg');
-        const clamp = gsap.utils.clamp(-6, 6);
-        const velST = ScrollTrigger.create({
-          onUpdate: (self) => {
-            const skew = clamp(self.getVelocity() / 400);
-            gsap.to(
-              { s: skew },
-              {
-                s: 0,
-                duration: 0.7,
-                ease: 'power3.out',
-                overwrite: true,
-                onUpdate: function () {
-                  skewSetter(this.targets()[0].s);
-                },
-              }
-            );
-          },
-        });
-
         const imgs = track.querySelectorAll<HTMLImageElement>('img');
         const onLoad = () => ScrollTrigger.refresh();
         imgs.forEach((img) => {
@@ -100,7 +115,6 @@ export default function Portfolio() {
             img.removeEventListener('load', onLoad);
             img.removeEventListener('error', onLoad);
           });
-          velST.kill();
           tween.scrollTrigger?.kill();
           tween.kill();
         };
@@ -135,6 +149,13 @@ export default function Portfolio() {
       <div className="pt-4 md:pt-28 pb-8 md:pb-8 px-5 md:px-10 md:shrink-0">
         <div className="max-w-7xl mx-auto flex items-end justify-between gap-6 flex-wrap">
           <div>
+            <div className="inline-flex items-center justify-center w-12 h-12 md:w-14 md:h-14 rounded-full bg-accent/10 text-accent mb-4 md:mb-5">
+              <svg viewBox="0 0 24 24" fill="none" className="w-6 h-6 md:w-7 md:h-7">
+                <rect x="2.5" y="2.5" width="19" height="19" rx="2" stroke="currentColor" strokeWidth="1.5"/>
+                <path d="M2.5 16 L8.5 11 L13 15 L21.5 7.5" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round" strokeLinecap="round"/>
+                <circle cx="8" cy="7.5" r="1.6" stroke="currentColor" strokeWidth="1.5"/>
+              </svg>
+            </div>
             <p className="text-[10px] md:text-xs uppercase tracking-[0.3em] text-muted mb-3 md:mb-4">
               Projectos conceituais
             </p>
@@ -166,7 +187,7 @@ export default function Portfolio() {
             <article
               key={p.name}
               data-work-card
-              className="group relative flex-shrink-0 snap-start w-[78vw] sm:w-[55vw] md:w-auto h-[62vh] md:h-full md:max-h-[70vh] md:aspect-[4/5] aspect-[4/5] rounded-3xl overflow-hidden bg-ink/80"
+              className="group relative flex-shrink-0 snap-start w-[78vw] sm:w-[55vw] md:w-auto md:h-[62vh] aspect-[4/5] rounded-3xl overflow-hidden bg-ink/80"
             >
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
@@ -182,7 +203,7 @@ export default function Portfolio() {
                 Conceito
               </span>
 
-              <div className="relative z-10 h-full flex flex-col justify-between p-6 md:p-10 text-paper">
+              <div className="relative z-10 h-full flex flex-col justify-between px-6 md:px-10 pt-14 md:pt-16 pb-6 md:pb-10 text-paper">
                 <div className="flex items-start justify-between text-[10px] md:text-xs uppercase tracking-[0.3em] opacity-80">
                   <span>{p.tag}</span>
                   <span>{p.year}</span>
