@@ -136,11 +136,16 @@ export default function Portfolio() {
         <div className="max-w-7xl mx-auto flex items-end justify-between gap-6 flex-wrap">
           <div>
             <p className="text-[10px] md:text-xs uppercase tracking-[0.3em] text-muted mb-3 md:mb-4">
-              Trabalhos recentes
+              Projectos conceituais
             </p>
             <h2 className="font-serif text-3xl md:text-5xl leading-[1.05] tracking-tight max-w-xl">
-              Alguns dos sites que fizemos.
+              Exemplos do que fazemos.
             </h2>
+            <p className="hidden md:block mt-4 text-sm text-muted max-w-xl leading-relaxed">
+              Estes são conceitos desenhados pela nossa equipa para demonstrar
+              o nosso estilo. Em breve, serão substituídos pelos primeiros
+              projectos de clientes reais.
+            </p>
           </div>
           <p className="hidden md:block text-sm text-muted max-w-xs">
             Continua a fazer scroll para ver todos.
@@ -171,6 +176,12 @@ export default function Portfolio() {
                 loading="lazy"
               />
               <div className="absolute inset-0 bg-gradient-to-br from-black/10 via-black/30 to-black/70" />
+
+              {/* Conceito badge */}
+              <span className="absolute top-4 right-4 md:top-6 md:right-6 bg-paper text-ink text-[9px] md:text-[10px] uppercase tracking-[0.25em] px-2.5 py-1 rounded-full z-20">
+                Conceito
+              </span>
+
               <div className="relative z-10 h-full flex flex-col justify-between p-6 md:p-10 text-paper">
                 <div className="flex items-start justify-between text-[10px] md:text-xs uppercase tracking-[0.3em] opacity-80">
                   <span>{p.tag}</span>
@@ -181,7 +192,7 @@ export default function Portfolio() {
                     {p.name}
                   </h3>
                   <div className="mt-4 inline-flex items-center gap-2 text-sm opacity-80 group-hover:opacity-100 transition-opacity">
-                    Ver projecto <span>→</span>
+                    Ver conceito <span>→</span>
                   </div>
                 </div>
               </div>
