@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useRef } from 'react';
+import Image from 'next/image';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
@@ -189,12 +190,13 @@ export default function Portfolio() {
               data-work-card
               className="group relative flex-shrink-0 snap-start w-[78vw] sm:w-[55vw] md:w-auto md:h-[62vh] aspect-[4/5] rounded-3xl overflow-hidden bg-ink/80"
             >
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
+              <Image
                 src={p.image}
-                alt={p.name}
-                className="absolute inset-0 w-full h-full object-cover transition-transform duration-[900ms] group-hover:scale-105"
-                loading="lazy"
+                alt={`Conceito ${p.name} — ${p.tag} · Proweb`}
+                fill
+                sizes="(max-width: 640px) 78vw, (max-width: 768px) 55vw, 500px"
+                className="object-cover transition-transform duration-[900ms] group-hover:scale-105"
+                priority={false}
               />
               <div className="absolute inset-0 bg-gradient-to-br from-black/10 via-black/30 to-black/70" />
 

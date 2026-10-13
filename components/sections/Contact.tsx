@@ -105,6 +105,9 @@ export default function Contact() {
                 <input
                   required
                   name="name"
+                  type="text"
+                  autoComplete="name"
+                  aria-label="Nome"
                   placeholder="Nome"
                   className="col-span-2 sm:col-span-1 bg-paper-soft border border-line rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-ink"
                 />
@@ -112,6 +115,8 @@ export default function Contact() {
                   required
                   type="email"
                   name="email"
+                  autoComplete="email"
+                  aria-label="Email"
                   placeholder="Email"
                   className="col-span-2 sm:col-span-1 bg-paper-soft border border-line rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-ink"
                 />
@@ -119,6 +124,7 @@ export default function Contact() {
               <select
                 name="pacote"
                 defaultValue=""
+                aria-label="Pacote de interesse"
                 className="w-full bg-paper-soft border border-line rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-ink"
               >
                 <option value="" disabled>
@@ -132,6 +138,7 @@ export default function Contact() {
               <textarea
                 name="message"
                 rows={4}
+                aria-label="Mensagem"
                 placeholder="Conta-nos sobre o teu projecto…"
                 className="w-full bg-paper-soft border border-line rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-ink resize-none"
               />
