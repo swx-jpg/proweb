@@ -1,4 +1,5 @@
 import { packages } from '@/lib/pricing';
+import { faqs } from '@/lib/faq';
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://proweb.pt';
 
@@ -77,9 +78,23 @@ export default function StructuredData() {
     publisher: { '@id': `${SITE_URL}#organization` },
   };
 
+  const faqPage: JsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    '@id': `${SITE_URL}#faq`,
+    mainEntity: faqs.map((f) => ({
+      '@type': 'Question',
+      name: f.q,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: f.a,
+      },
+    })),
+  };
+
   const graph = {
     '@context': 'https://schema.org',
-    '@graph': [organization, localBusiness, website],
+    '@graph': [organization, localBusiness, website, faqPage],
   };
 
   return (

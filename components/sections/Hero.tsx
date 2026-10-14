@@ -87,7 +87,7 @@ export default function Hero() {
           data-hero-meta
           className="text-[10px] md:text-xs uppercase tracking-[0.3em] text-muted mb-6 md:mb-8"
         >
-          Estúdio web · Portugal
+          Estúdio web em Portugal · Desde 2026
         </p>
 
         <h1 className="font-serif text-[clamp(2.25rem,8vw,8rem)] leading-[0.95] tracking-tight text-ink max-w-5xl">
@@ -138,9 +138,11 @@ export default function Hero() {
           data-hero-sub
           className="mt-8 md:mt-10 max-w-xl text-base md:text-xl text-ink-soft leading-relaxed"
         >
-          Desenhamos e desenvolvemos sites profissionais para marcas que querem
-          ser levadas a sério. Design editorial, animações cuidadas, entregas
-          rápidas.
+          Clientes que entram no teu site e dizem{' '}
+          <span className="text-ink font-medium">
+            "estes aqui são a sério"
+          </span>
+          . Entrega em 3 a 14 dias, 60 dias de garantia, suporte em português.
         </p>
 
         <div className="mt-10 flex flex-col sm:flex-row gap-4">
@@ -150,7 +152,7 @@ export default function Hero() {
               href="#precos"
               className="btn-fill-up group inline-flex items-center justify-center gap-2 bg-ink text-paper rounded-full px-7 py-4 text-base font-medium transition-colors"
             >
-              Ver pacotes
+              Ver pacotes · desde 349€
               <span className="transition-transform group-hover:translate-x-1">
                 →
               </span>
@@ -162,7 +164,7 @@ export default function Hero() {
               href="#contacto"
               className="inline-flex items-center justify-center gap-2 border border-ink/40 rounded-full px-7 py-4 text-base font-medium hover:border-ink hover:bg-ink/5 transition-colors"
             >
-              Falar connosco
+              Marcar chamada grátis
             </a>
           </Magnetic>
         </div>

@@ -3,11 +3,14 @@ import Hero from '@/components/sections/Hero';
 import Guarantees from '@/components/Guarantees';
 import MacbookScroll from '@/components/sections/MacbookScroll';
 import Services from '@/components/sections/Services';
+import ParaQuem from '@/components/sections/ParaQuem';
 import Pricing from '@/components/sections/Pricing';
 import AddOns from '@/components/sections/AddOns';
 import Portfolio from '@/components/sections/Portfolio';
 import Photography from '@/components/sections/Photography';
 import Process from '@/components/sections/Process';
+import FAQ from '@/components/sections/FAQ';
+import LeadMagnet from '@/components/sections/LeadMagnet';
 import Contact from '@/components/sections/Contact';
 import Footer from '@/components/sections/Footer';
 
@@ -21,11 +24,14 @@ export default function Home() {
 
         <MacbookScroll />
         <Services />
+        <ParaQuem />
         <Pricing />
         <AddOns />
         <Portfolio />
         <Photography />
         <Process />
+        <FAQ />
+        <LeadMagnet />
         <Contact />
       </main>
       <Footer />

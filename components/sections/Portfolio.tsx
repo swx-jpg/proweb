@@ -164,9 +164,15 @@ export default function Portfolio() {
               Exemplos do que fazemos.
             </h2>
             <p className="hidden md:block mt-4 text-sm text-muted max-w-xl leading-relaxed">
-              Estes são conceitos desenhados pela nossa equipa para demonstrar
-              o nosso estilo. Em breve, serão substituídos pelos primeiros
-              projectos de clientes reais.
+              Enquanto construímos para os primeiros clientes, mostramos aqui
+              como pensamos cada nicho.{' '}
+              <a
+                href="#contacto"
+                className="text-ink underline underline-offset-4 hover:text-accent"
+              >
+                Procuramos restaurantes, clínicas e lojas
+              </a>{' '}
+              para abrir portfólio real.
             </p>
           </div>
           <p className="hidden md:block text-sm text-muted max-w-xs">

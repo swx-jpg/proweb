@@ -13,6 +13,7 @@ export type Package = {
   changesPerMonth: number;
   features: string[];
   featured?: boolean;
+  agencyAnchor: string; // typical price at a traditional agency, for anchoring
 };
 
 export const packages: Package[] = [
@@ -25,6 +26,7 @@ export const packages: Package[] = [
     monthlyOnly: { noVat: '49 €/mês', vat: '60,27 €/mês' },
     delivery: '3 dias',
     changesPerMonth: 1,
+    agencyAnchor: 'desde 1 500 €',
     features: [
       'Adaptado a telemóvel',
       'Botão de WhatsApp e chamada',
@@ -42,6 +44,7 @@ export const packages: Package[] = [
     monthlyOnly: { noVat: '79 €/mês', vat: '97,17 €/mês' },
     delivery: '7 dias',
     changesPerMonth: 2,
+    agencyAnchor: 'desde 3 500 €',
     features: [
       'Tudo do Essencial',
       'Formulário de contacto',
@@ -59,6 +62,7 @@ export const packages: Package[] = [
     monthlyOnly: { noVat: '129 €/mês', vat: '158,67 €/mês' },
     delivery: '14 dias',
     changesPerMonth: 4,
+    agencyAnchor: 'desde 6 000 €',
     features: [
       'Tudo do Profissional',
       'Até 25 produtos',

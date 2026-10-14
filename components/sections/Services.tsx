@@ -3,18 +3,18 @@ import Reveal from '@/components/Reveal';
 const points = [
   {
     n: '01',
-    title: 'Design feito à mão',
-    body: 'Nada de templates. Cada secção é desenhada para a tua marca, para o teu público, para o teu objectivo.',
+    title: 'Nenhum site é igual',
+    body: 'Nada de templates. Cada secção é desenhada para a tua marca, para o teu público, para o teu objectivo — tu reconheces-te no site antes do primeiro cliente.',
   },
   {
     n: '02',
-    title: 'Animações profissionais',
-    body: 'Scroll suave, transições cinemáticas e detalhes de movimento que separam um site amador de um site caro.',
+    title: 'Movimento com propósito',
+    body: 'Scroll suave, transições cinemáticas, detalhes de interacção. Não para ser fancy — para o visitante lembrar-se de ti depois de sair do site.',
   },
   {
     n: '03',
-    title: 'Rápido e optimizado',
-    body: 'Código moderno, SEO técnico, performance pensada ao detalhe. Google gosta. Clientes também.',
+    title: 'Google ama. Clientes também.',
+    body: 'Código moderno, SEO técnico, performance ao detalhe. Carrega em 1 segundo em 4G, aparece bem no Google, está pronto a vender desde o primeiro dia.',
   },
 ];
 
@@ -36,7 +36,9 @@ export default function Services() {
             className="font-serif text-4xl md:text-6xl leading-[1.05] tracking-tight"
           >
             Um site é a primeira impressão.{' '}
-            <span className="text-muted">Fazemo-la contar.</span>
+            <span className="text-muted">
+              A tua tem de ficar na memória.
+            </span>
           </h2>
         </Reveal>
 

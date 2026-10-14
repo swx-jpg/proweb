@@ -54,10 +54,42 @@ export default function Pricing() {
             <span className="text-muted">Sem surpresas.</span>
           </h2>
           <p className="mt-6 text-base md:text-lg text-ink-soft max-w-xl leading-relaxed">
-            A mensalidade inclui alojamento, domínio, certificado SSL e as
-            alterações indicadas. Garantia de 60 dias — se não ficar
-            satisfeito, cancela sem penalização.
+            A mensalidade inclui alojamento, domínio, SSL e as alterações
+            indicadas.{' '}
+            <span className="text-ink font-medium">
+              60 dias para experimentar.
+            </span>{' '}
+            Se não convencer os teus clientes, devolvemos tudo e ficas com o
+            site. Zero penalização, zero burocracia.
           </p>
+        </div>
+
+        {/* Launch offer banner */}
+        <div className="mb-10 md:mb-14 rounded-2xl bg-ink text-paper px-5 md:px-8 py-5 md:py-6 flex flex-col md:flex-row md:items-center justify-between gap-4">
+          <div className="flex items-start md:items-center gap-4">
+            <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-accent text-paper flex-shrink-0 font-serif text-xl">
+              !
+            </span>
+            <div>
+              <div className="font-serif text-lg md:text-xl leading-tight">
+                Oferta de lançamento
+              </div>
+              <p className="text-sm text-paper/70 mt-1 max-w-xl">
+                Os primeiros 5 clientes de 2026 têm{' '}
+                <span className="text-accent-soft font-medium">
+                  20% off na instalação
+                </span>{' '}
+                e aparecem em destaque no nosso portfólio.{' '}
+                <span className="text-paper">2 lugares</span> já preenchidos.
+              </p>
+            </div>
+          </div>
+          <a
+            href="#contacto"
+            className="inline-flex items-center justify-center gap-2 bg-paper text-ink rounded-full px-5 py-3 text-sm font-medium hover:bg-accent hover:text-paper transition-colors flex-shrink-0"
+          >
+            Reservar lugar →
+          </a>
         </div>
 
         <div ref={ref} className="grid lg:grid-cols-3 gap-6 lg:gap-8">
@@ -100,11 +132,21 @@ export default function Pricing() {
                   }`}
                 >
                   <div
+                    className={`text-[10px] mb-3 flex items-center gap-2 ${
+                      dark ? 'text-paper/50' : 'text-muted'
+                    }`}
+                  >
+                    <span>Numa agência:</span>
+                    <span className="line-through decoration-[1.5px]">
+                      {pkg.agencyAnchor}
+                    </span>
+                  </div>
+                  <div
                     className={`text-[10px] uppercase tracking-[0.3em] mb-2 ${
                       dark ? 'text-paper/60' : 'text-muted'
                     }`}
                   >
-                    Instalação
+                    Instalação Proweb
                   </div>
                   <div className="flex items-baseline gap-2 flex-wrap">
                     <div className="font-serif text-4xl md:text-5xl tracking-tight">
